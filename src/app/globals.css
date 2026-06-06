@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+
+:root {
+  --revy: #7C3AED;
+  --revy-dark: #6D28D9;
+  --revy-gold: #FBBF24;
+}
+
+html, body {
+  background: #F8FAFC;
+  color: #0F172A;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display { font-family: 'Outfit', 'Inter', sans-serif; }
+
+.gradient-revy {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-card border border-slate-100;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-white font-medium
+    bg-revy hover:bg-revy-dark transition shadow-pop disabled:opacity-50;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-medium
+    text-slate-700 hover:bg-slate-100 transition;
+}
+.input {
+  @apply w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-sm
+    focus:outline-none focus:ring-2 focus:ring-revy/30 focus:border-revy transition;
+}
+.badge {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+}
